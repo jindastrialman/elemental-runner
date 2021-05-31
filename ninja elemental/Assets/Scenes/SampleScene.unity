@@ -866,7 +866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1615752807}
-  offset: {x: 5, y: 5, z: 8}
+  offset: {x: 10, y: 10, z: 10}
 --- !u!1 &1164486614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,7 +1018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7558960574385411383, guid: f4e042a881d6572e788925657e85b76b, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7558960574385411383, guid: f4e042a881d6572e788925657e85b76b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1549,6 +1549,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 13482017865268790, guid: 622d2b2524008d9bf88d5b7140d413bc, type: 3}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 13482017865268790, guid: 622d2b2524008d9bf88d5b7140d413bc, type: 3}
+      propertyPath: orthographic size
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 622d2b2524008d9bf88d5b7140d413bc, type: 3}
 --- !u!1001 &2011956739
@@ -1810,7 +1818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3196414843212435254, guid: 7f3393f8da55814acaaf094e022f43da, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3196414843212435254, guid: 7f3393f8da55814acaaf094e022f43da, type: 3}
       propertyPath: m_LocalPosition.x
