@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class AttackCollider : MonoBehaviour
 {
-    public GameObject self;
-    
-    public Rigidbody _rigidbody;
+    public GameObject selfObj;
     
     bool damageState;
     
+    public Material idleMaterial;
+    public Material painMaterial;
+    public Renderer selfRenderer;
+    
     public float hitDamage;
-    public float knockbackForce;
     public float hitPoints;
     public float damageCooldown;
     
@@ -31,7 +32,7 @@ public class AttackCollider : MonoBehaviour
     		}
     		else
     		{
-    			Destroy(self);
+    			Destroy(selfObj);
     		}
     	}
     	
@@ -43,9 +44,11 @@ public class AttackCollider : MonoBehaviour
     	{
     		if(damageState)
     		{
+    			selfRenderer.material = painMaterial;
     			hitPoints -= hitDamage;
     			yield return new WaitForSeconds(damageCooldown);
     			damageState = false;
+    			selfRenderer.material = idleMaterial;
     		}
     		else
     		{
