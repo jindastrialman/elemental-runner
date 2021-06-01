@@ -8,7 +8,8 @@ public class MeleeAttack : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
     	
-    	if(other.tag == "Enemy")
-    		Debug.Log("xddd");
+    	if(other.gameObject.GetComponent<AttackCollider>())
+    		other.gameObject.GetComponent<AttackCollider>().dealDamage(20f);
+    		
     }
 }

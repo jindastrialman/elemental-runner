@@ -12,7 +12,6 @@ public class AttackCollider : MonoBehaviour
     public Material painMaterial;
     public Renderer selfRenderer;
     
-    public float hitDamage;
     public float hitPoints;
     public float damageCooldown;
     
@@ -22,19 +21,19 @@ public class AttackCollider : MonoBehaviour
     	StartCoroutine(damageCoroutine());
     }
     
-	void OnTriggerEnter(Collider other)
+	public void dealDamage(float damage = 0)
     {
-    	if(other.tag == "AbilityCast")
+    	
+    	if(hitPoints > damage)
     	{
-    		if(hitPoints > hitDamage)
-    		{
-    			damageState = true;
-    		}
-    		else
-    		{
-    			Destroy(selfObj);
-    		}
+    		hitPoints -= damage;
+    		damageState = true;
+   		}
+   		else
+   		{
+   			Destroy(selfObj);
     	}
+    
     	
     }
     
@@ -45,7 +44,6 @@ public class AttackCollider : MonoBehaviour
     		if(damageState)
     		{
     			selfRenderer.material = painMaterial;
-    			hitPoints -= hitDamage;
     			yield return new WaitForSeconds(damageCooldown);
     			damageState = false;
     			selfRenderer.material = idleMaterial;
