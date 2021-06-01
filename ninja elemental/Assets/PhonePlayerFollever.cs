@@ -19,7 +19,7 @@ public class PhonePlayerFollever : MonoBehaviour
     {
     
     	StartCoroutine(Attack());
-    	CachedDirection = new Vector3(0,0,0);
+    	CachedDirection = new Vector3(Mathf.Cos(Mathf.PI/3f),0,Mathf.Sin(Mathf.PI/3f));
     
     }
     

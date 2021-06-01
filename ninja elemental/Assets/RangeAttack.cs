@@ -43,7 +43,7 @@ public class RangeAttack : MonoBehaviour
        					hit.collider.gameObject.GetComponent<AttackCollider>().dealDamage(attackDamage);
        	
        			}
-    			yield return new WaitForSeconds(0.1f);
+    			yield return new WaitForSeconds(0.3f);
     			Debug.Log("bang");
     			isAttacking = false;
     		}

@@ -1972,7 +1972,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 10290220}
         m_TargetAssemblyTypeName: RangeAttack, Assembly-CSharp
         m_MethodName: OnAttackButtonDown
         m_Mode: 1

@@ -24,16 +24,18 @@ public class AttackCollider : MonoBehaviour
 	public void dealDamage(float damage = 0)
     {
     	
-    	if(hitPoints > damage)
+    	if(!damageState)
     	{
-    		hitPoints -= damage;
-    		damageState = true;
-   		}
-   		else
-   		{
-   			Destroy(selfObj);
+    		if(hitPoints > damage)
+    		{
+    			hitPoints -= damage;
+    			damageState = true;
+   			}
+   			else
+   			{
+   				Destroy(selfObj);
+    		}
     	}
-    
     	
     }
     
