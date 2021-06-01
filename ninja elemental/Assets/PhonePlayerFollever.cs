@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PhonePlayerFollever : MonoBehaviour
 {
-    public Rigidbody _rigidbody;
+    public CharacterController _characterController;
     public float _tiltAngle;
     public float _movementSpeed;
     public GameObject attackSphere;
@@ -25,20 +25,22 @@ public class PhonePlayerFollever : MonoBehaviour
     
     void Update()
     {
-		// Smoothly tilts a transform towards a target rotation.
-        Vector2 direction2D = _joystick.Direction;
-        Debug.Log(direction2D.ToString());
-        if( Mathf.Abs(direction2D.x) > 0.05f || Mathf.Abs(direction2D.y) > 0.05f)
-        	CachedDirection = new Vector3(direction2D.x, 0 , direction2D.y);
+        if( Mathf.Abs(_joystick.Horizontal) > 0.05f || Mathf.Abs(_joystick.Vertical) > 0.05f)
+        	CachedDirection = new Vector3(_joystick.Horizontal, 0 , _joystick.Vertical);
                 // Rotate the cube by converting the angles into a quaternion.
         Quaternion target = Quaternion.LookRotation(CachedDirection, Vector3.up);
         // Dampen towards the target rotation
-        transform.rotation = Quaternion.Slerp(transform.rotation, target,  Time.deltaTime * 10.0f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 10.0f);
         
-        if(	Quaternion.Angle(transform.rotation, target) <= 25f && 
-        	(Mathf.Abs(direction2D.x) > 0.1f || Mathf.Abs(direction2D.y) > 0.1f))
+        if(	Quaternion.Angle(transform.rotation, target) <= 70f && 
+        	(Mathf.Abs(_joystick.Horizontal) > 0.1f || Mathf.Abs(_joystick.Vertical) > 0.1f))
         {
-        	_rigidbody.AddRelativeForce(-1f * _movementSpeed * Time.deltaTime,0,0, ForceMode.VelocityChange);
+        	_characterController.Move(new Vector3(-1f * _joystick.Vertical * _movementSpeed * Time.deltaTime, 0,
+        	 									  		_joystick.Horizontal * _movementSpeed * Time.deltaTime));
+        	if(!_characterController.isGrounded)
+        	{
+        		_characterController.Move(new Vector3(0, -1f, 0));
+        	}
         }
         
     }
