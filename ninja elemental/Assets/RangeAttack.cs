@@ -8,6 +8,8 @@ public class RangeAttack : MonoBehaviour
 	public float attackDamage;
 	//int layerMask;
 	bool isAttacking;
+	
+	public LineRenderer _lineRenderer;
     	
     Ray _ray;
    	RaycastHit hit;
@@ -41,9 +43,16 @@ public class RangeAttack : MonoBehaviour
        			{
        				if(hit.collider.gameObject.GetComponent<AttackCollider>())
        					hit.collider.gameObject.GetComponent<AttackCollider>().dealDamage(attackDamage);
-       	
+       					
+       				Vector3[] array = new Vector3[2];
+       				array[0] = transform.position;
+       				array[1] = hit.point;
+       					
+       				_lineRenderer.enabled = true;
+       				_lineRenderer.SetPositions(array);
        			}
     			yield return new WaitForSeconds(0.3f);
+    			_lineRenderer.enabled = false;
     			Debug.Log("bang");
     			isAttacking = false;
     		}
