@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 40
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: df16290fa0c57bf7780f55a547268b4c, type: 2}
 --- !u!1 &10290218
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1596854032450242406, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
 --- !u!1 &51241184
@@ -368,6 +372,7 @@ Transform:
   - {fileID: 1615752807}
   - {fileID: 1164486615}
   - {fileID: 1790103305}
+  - {fileID: 1993709623}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
@@ -737,6 +742,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 1596854032450242406, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
 --- !u!4 &304353620 stripped
@@ -815,6 +824,10 @@ PrefabInstance:
     - target: {fileID: 1596854032450242406, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
       propertyPath: m_Name
       value: Obstacle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596854032450242406, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
@@ -967,6 +980,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1596854032450242406, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
 --- !u!1001 &735349233
@@ -1023,6 +1040,10 @@ PrefabInstance:
     - target: {fileID: 1596854032450242406, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
       propertyPath: m_Name
       value: Obstacle (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596854032450242406, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
@@ -1143,6 +1164,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa2c939c0359ac4dbce3f49e8b90252, type: 3}
+--- !u!1 &785747961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7558960574385411385, guid: f4e042a881d6572e788925657e85b76b, type: 3}
+  m_PrefabInstance: {fileID: 2132705190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &785747967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785747961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e498a9fd6dede05cabc9d81365f3fcf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myNavAgent: {fileID: 785747968}
+  player: {fileID: 1615752807}
+--- !u!195 &785747968
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785747961}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &803854994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,6 +1440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1596854032450242406, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
 --- !u!1001 &1522962898
@@ -1517,6 +1583,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1596854032450242406, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
 --- !u!1001 &1571400887
@@ -1581,6 +1651,10 @@ PrefabInstance:
     - target: {fileID: 1596854032450242406, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
       propertyPath: m_Name
       value: Obstacle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596854032450242406, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
@@ -1967,6 +2041,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983641388}
   m_CullTransparentMesh: 1
+--- !u!1 &1993709622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1993709623}
+  m_Layer: 0
+  m_Name: NavMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1993709623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993709622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 51241185}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1994328774
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2327,6 +2431,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 7558960574385411385, guid: f4e042a881d6572e788925657e85b76b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e042a881d6572e788925657e85b76b, type: 3}
 --- !u!4 &2133310432 stripped
@@ -2505,6 +2613,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3448890736404906338, guid: 7f3393f8da55814acaaf094e022f43da, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4587880037876292015, guid: 7f3393f8da55814acaaf094e022f43da, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2670,6 +2782,10 @@ PrefabInstance:
     - target: {fileID: 1596854032450242406, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
       propertyPath: m_Name
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1596854032450242406, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39f0ae27ff7d4bc5a8dbea1a5523dca, type: 3}
