@@ -1354,7 +1354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e498a9fd6dede05cabc9d81365f3fcf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myNavAgent: {fileID: 785747968}
+  enemyNavigationAgent: {fileID: 785747968}
   player: {fileID: 1615752807}
 --- !u!195 &785747968
 NavMeshAgent:
@@ -1370,7 +1370,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1627,7 +1627,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1647,7 +1647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e498a9fd6dede05cabc9d81365f3fcf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myNavAgent: {fileID: 1054628473}
+  enemyNavigationAgent: {fileID: 1054628473}
   player: {fileID: 1615752807}
 --- !u!1 &1071433460 stripped
 GameObject:
@@ -1673,7 +1673,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1693,7 +1693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e498a9fd6dede05cabc9d81365f3fcf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myNavAgent: {fileID: 1071433462}
+  enemyNavigationAgent: {fileID: 1071433462}
   player: {fileID: 1615752807}
 --- !u!1 &1164486614
 GameObject:
@@ -1885,7 +1885,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 6
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1905,7 +1905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e498a9fd6dede05cabc9d81365f3fcf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myNavAgent: {fileID: 1569898553}
+  enemyNavigationAgent: {fileID: 1569898553}
   player: {fileID: 1615752807}
 --- !u!1001 &1571400887
 PrefabInstance:
